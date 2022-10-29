@@ -10,13 +10,34 @@ Extras:
 
 """
 
-number = input("Please input a number: ")
+number = int(input("Please input a number: "))
+check = int(input("Please enter a second number to check if it is divisble by {}: ".format(number)))
 
-odd_even = (int(number) % 2)
-if odd_even == 0:
-    print("number is even")
-elif odd_even == 1:
-    print("number is odd")
-else:
-    print("you got me")
+def odd_even(number):
+    odd_even = (int(number) % 2)
+    if odd_even == 0:
+        print("number is even")
+    elif odd_even == 1:
+        print("number is odd")
+    else:
+        print("you got me")
 
+#x = int(input("Please Enter Number"))
+
+def multiple_of_four(number):
+    if number%4 == 0:
+        print("number is divisible by 4")
+    else:
+        print("number is not divisible by 4")
+
+def divisible(number, check):
+    if number%check == 0:
+        print("{} is divisble by {}".format(number, check))
+    else:
+        print("{} is not divisble by {}".format(number, check))
+
+
+#odd_even(number)
+#multiple_of_four(number)
+
+divisible(number, check)
